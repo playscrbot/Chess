@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0e5d8; /* Light background */
+    background-image: linear-gradient(135deg, #f0e5d8 25%, transparent 25%, transparent 75%, #f0e5d8 75%, #f0e5d8), linear-gradient(225deg, #f0e5d8 25%, transparent 25%, transparent 75%, #f0e5d8 75%, #f0e5d8);
+    background-size: 40px 40px;
+    color: #333; /* Dark text */
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+    text-align: center;
+    position: relative;
+}
+  
+.title {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: #2c3e50;
+    font-family: 'Poppins', serif;
+    animation: fadeIn 0.3s ease-in;
+}
+  
+.description {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #7f8c8d;
+    animation: fadeIn 0.5s ease-in 0.5s;
+}
+  
+.button-container {
+    display: flex;
+    gap: 20px; /* Space between buttons */
+}
+  
+.chess-button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #3498db; /* Blue button */
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    animation: fadeIn 0.5s ease-in 0.5s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease-in 1s;
+    position: relative;
+}
+  
+.chess-button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+    transform: scale(1.05);
+}
+  
+.chess-button:focus {
+    outline: none; /* Remove outline on focus */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .title {
+    font-size: 2.5em; /* Smaller title on small screens */
+  }
+
+  .description {
+    font-size: 1.2em; /* Smaller description on small screens */
+  }
+
+  .chess-button {
+    padding: 10px 20px; /* Smaller padding on buttons */
+    font-size: 1em; /* Smaller font size on buttons */
+  }
+}
+  
+/* Animations */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px); /* Start slightly above */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0); /* End at original position */
+    }
+}
